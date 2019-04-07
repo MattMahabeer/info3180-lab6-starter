@@ -63,7 +63,7 @@ const NewsList = Vue.component('news-list', {
     `,
     created: function() {
         let self = this;
-        fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=3f94ff58eeca400381f8816f5f30f127')
+        fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=')
         .then(function(response) {
             return response.json();
         })
@@ -81,7 +81,7 @@ const NewsList = Vue.component('news-list', {
     methods: {
         searchNews: function() {
             let self = this;
-            fetch('https://newsapi.org/v2/everything?q='+self.searchTerm + '&language=en&apiKey=3f94ff58eeca400381f8816f5f30f127')
+            fetch('https://newsapi.org/v2/everything?q='+self.searchTerm + '&language=en&apiKey=')
             .then(function(response) {
                 return response.json();
             })
